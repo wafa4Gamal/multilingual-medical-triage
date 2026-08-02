@@ -105,6 +105,25 @@ Optimization: AdamW Optimizer, Cross-Entropy Loss, Dropout = 0.3
 
 Validation Accuracy: 96.2%
 
+---
+
+## 🧹 Data Preprocessing & Exploratory Data Analysis (EDA)
+
+To ensure high-quality training inputs for both Transformer models, a rigorous data cleaning and feature engineering pipeline was executed:
+
+* **Text Normalization & Noise Reduction:** 
+  * Cleaned raw clinical texts by removing HTML tags, special characters, non-alphanumeric noise, and redundant whitespace.
+  * Applied Arabic-specific text preprocessing (e.g., removing diacritics/Tashkeel, normalizing Alef/Yaa/Taa Marbuta) optimized for `AraBERT v02` tokenization.
+* **Handling Class Imbalance:**
+  * Analyzed class distribution across all **19 medical specialties**.
+  * Mitigated data imbalance challenges in minority specialty categories using **SMOTE (Synthetic Minority Over-sampling Technique)** on extracted feature embeddings to prevent model bias.
+* **Feature Scaling & Standardization:**
+  * Applied **RobustScaler** to numerical clinical indicators and metadata features to minimize the influence of extreme medical outliers.
+* **Train / Validation Split:**
+  * Implemented a stratified split (80/20) to maintain uniform class proportions across training and evaluation datasets.
+
+---
+
 ## 🛠️ Tech Stack
 | Domain | Technologies Used |
 | :--- | :--- |
