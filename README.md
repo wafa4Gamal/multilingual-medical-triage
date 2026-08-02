@@ -142,10 +142,9 @@ Open your browser and navigate to http://127.0.0.1:8000 or check the interactive
 
 ## 🐳 Running with Docker
 Bash
-# Build the Docker image
+* Build the Docker image
 docker build -t medical-triage-app .
-
-# Run the container
+* Run the container
 docker run -p 7860:7860 medical-triage-app
 
 ## 🔮 Future Improvements
