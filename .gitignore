@@ -1,0 +1,17 @@
+# Python environment & cache
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+
+# Model Weights (Do not push heavy weights to GitHub)
+*.pt
+*.bin
+*.pth
+*.safetensors
+checkpoint-*/
+
+# IDE settings
+.vscode/
+.idea/
